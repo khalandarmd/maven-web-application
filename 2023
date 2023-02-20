@@ -19,5 +19,12 @@ pipeline{
         deploy adapters: [tomcat9(credentialsId: 'Tomcat_Cred', path: '', url: 'http://13.232.122.220:8080')], contextPath: null, war: '**/maven-web-application.war'
       }
     }
+    post{
+        always{
+            mail to: "khalandar.md@gmail.com",
+            subject: "From Jenkins",
+            body: "Hi Khalandar here am sanding this mail through Jenkins Build"
+        }
+    }
   }
 }
