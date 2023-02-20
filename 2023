@@ -37,16 +37,18 @@ pipeline{
             body: "Hi Khalandar here am sanding this mail through Jenkins Build is Success"
         } */
           success{
-            mail to: 'md.dada@gmail.com', 
+            /*mail to: 'md.dada@gmail.com', 
             subject: 'From Jenkins Snippet Genarator', 
             body: 'Hi Khalandar here am sanding this mail through Jenkins Build is Success',
-            bcc: '', cc: '', from: '', replyTo: '' 
+            bcc: '', cc: '', from: '', replyTo: '' */
+            mail bcc: '', body: 'Hi Khalandar here am sanding this mail through Jenkins Build is Success', cc: '', from: '', replyTo: '', subject: 'From Jenkins Snippet Genarator', to: 'md.dada@gmail.com'
         }
         failure{
-            mail to: "md.dada@gmail.com",
+            /*mail to: "md.dada@gmail.com",
             subject: "From Jenkins Snippet Genarator",
             body: 'Hi Khalandar here am sanding this mail through Jenkins Build is Failed'
-             bcc: '', cc: '', from: '', replyTo: '' 
+             bcc: '', cc: '', from: '', replyTo: '' */
+             mail bcc: '', body: 'Hi Khalandar here am sanding this mail through Jenkins Build is Failuar', cc: '', from: '', replyTo: '', subject: 'From Jenkins Snippet Genarator', to: 'md.dada@gmail.com'
         }
     }
 }
