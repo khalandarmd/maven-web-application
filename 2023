@@ -35,6 +35,17 @@ pipeline{
             mail to: "mohammaddadakhalandar17@gmail.com",
             subject: "From Jenkins",
             body: "Hi Khalandar here am sanding this mail through Jenkins Build is Success"
+        } 
+          success{
+            mail to: 'md.dada@gmail.com', 
+            subject: 'From Jenkins Snippet Genarator', 
+            body: 'Hi Khalandar here am sanding this mail through Jenkins Build is Success',
+            bcc: '', , cc: '', from: '', replyTo: '' 
+        }
+        failure{
+            mail to: "md.dada@gmail.com",
+            subject: "From Jenkins Snippet",
+            body: "Hi Khalandar here am sanding this mail through Jenkins Build is Failed"
         }
     }
 }
