@@ -24,7 +24,17 @@ pipeline{
         always{
             mail to: "mohammaddadakhalandar17@gmail.com",
             subject: "From Jenkins",
-            body: "Hi Khalandar here am sanding this mail through Jenkins Build"
+            body: "Hi Khalandar here am sanding this mail through Jenkins Build - Always"
+        }
+        failure{
+            mail to: "mohammaddadakhalandar17@gmail.com",
+            subject: "From Jenkins",
+            body: "Hi Khalandar here am sanding this mail through Jenkins Build is Failed"
+        }
+        success{
+            mail to: "mohammaddadakhalandar17@gmail.com",
+            subject: "From Jenkins",
+            body: "Hi Khalandar here am sanding this mail through Jenkins Build is Success"
         }
     }
 }
