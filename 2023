@@ -1,0 +1,18 @@
+pipeline{
+  agent any
+  tools{
+    maven 'maven3.9.0'
+  }
+  stages{
+    stage('Checkout'){
+      steps{
+        git credentialsId: 'GitHub-Cred-2023', url: 'https://github.com/khalandarmd/maven-web-application.git'
+      }
+    }
+    stage('Build'){
+      steps{
+        sh 'mvn clean install'
+      }
+    }
+  }
+}
