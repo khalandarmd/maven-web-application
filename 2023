@@ -16,7 +16,7 @@ pipeline{
     }
     stage('Deploy'){
       steps{
-        deploy adapters: [tomcat9(credentialsId: 'Tomcat_Cred', path: '', url: 'http://13.232.122.220:8084')], contextPath: null, war: '**/maven-web-application.war'
+        deploy adapters: [tomcat9(credentialsId: 'Tomcat_Cred', path: '', url: 'http://13.232.122.220:8080')], contextPath: null, war: '**/maven-web-application.war'
       }
     }
   }
