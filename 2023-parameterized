@@ -13,7 +13,7 @@ pipeline{
     }
     stage("Parameterized Job Demo"){
       steps{
-        echo "Hi ${Name} Welcome to ${parms.OrgName} and you are working for ${parms.BName} Branch"
+        echo "Hi ${Name} Welcome to ${params.OrgName} and you are working for ${params.BName} Branch"
       }
     }
   }
