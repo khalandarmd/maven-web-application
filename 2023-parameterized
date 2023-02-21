@@ -6,8 +6,8 @@ pipeline{
         choice choices: ['Dev', 'QA', 'Perf', 'Prod'], description: 'Select Branch ', name: 'BName'
   }
   stages{
-    stage{
-      steps("checkout"){
+    stage("checkout"){
+      steps{
         git credentialsId: 'GitHub-Cred-2023', url: 'https://github.com/khalandarmd/maven-web-application.git'
       }
     }
