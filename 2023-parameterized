@@ -1,4 +1,4 @@
-pipeline{
+/*pipeline{
   agent any
   parameters{
         string defaultValue: 'Mohammad', description: 'Enter your Name', name: 'Name'
@@ -17,4 +17,21 @@ pipeline{
       }
     }
   }
-}
+} */
+
+pipeline{
+    agent any
+    parameters {
+        string defaultValue: 'Mohammad', description: 'Enter your Name', name: 'Name'
+        string defaultValue: 'Virtusa', description: 'Enter your Org Name', name: 'OrgName'
+        choice choices: ['Dev', 'QA', 'Perf', 'Prod'], description: 'Select Branch ', name: 'BName'
+    }
+    stages{
+        stage("Parameterized job demo"){
+           steps{
+               echo "Hi ${Name} , welcome to ${params.OrgName}"
+               echo " Selected Branch is ${params.BName}"
+           }
+    }
+    }
+}  
