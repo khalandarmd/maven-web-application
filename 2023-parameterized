@@ -1,4 +1,4 @@
-/*pipeline{
+pipeline{
   agent any
   parameters{
         string defaultValue: 'Mohammad', description: 'Enter your Name', name: 'Name'
@@ -17,9 +17,9 @@
       }
     }
   }
-} */
+} 
 
-pipeline{
+/* pipeline{
     agent any
     parameters {
         string defaultValue: 'Mohammad', description: 'Enter your Name', name: 'Name'
@@ -32,6 +32,6 @@ pipeline{
                echo "Hi ${Name} , welcome to ${params.OrgName}"
                echo " Selected Branch is ${params.BName}"
            }
-    }
+    }*/
     }
 }  
