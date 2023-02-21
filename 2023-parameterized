@@ -32,6 +32,7 @@ pipeline{
                echo "Hi ${Name} , welcome to ${params.OrgName}"
                echo " Selected Branch is ${params.BName}"
            }
-    }*/
+    }
     }
 }  
+*/
