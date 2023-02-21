@@ -6,6 +6,11 @@ pipeline{
         choice choices: ['Dev', 'QA', 'Perf', 'Prod'], description: 'Select Branch ', name: 'BName'
   }
   stages{
+    stage{
+      steps("checkout"){
+        git credentialsId: 'GitHub-Cred-2023', url: 'https://github.com/khalandarmd/maven-web-application.git'
+      }
+    }
     stage("Parameterized Job Demo"){
       steps{
         sh "echo 'Hi ${params.Name} Welcome to ${parms.OrgName} and you are working for ${parms.BName} Branch'"
